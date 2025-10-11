@@ -1,10 +1,13 @@
 black
+fastparquet
 flake8
 ipython
 isort
 jupyterlab
 loguru
 matplotlib
+mkdocs
+mkdocs-material
 notebook
 numpy
 pandas
@@ -14,5 +17,4 @@ python-dotenv
 scikit-learn
 tqdm
 typer
-fastparquet
 -e .

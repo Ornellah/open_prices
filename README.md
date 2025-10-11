@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Open Prices Analysis est un projet de data science visant à explorer et visualiser des données ouvertes de prix alimentaires.
+Open Prices Analysis is a data science project aiming to explore and visualize open data on food prices.
 
 ## Project Organization
 

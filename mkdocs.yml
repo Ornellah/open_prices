@@ -3,6 +3,8 @@ site_name: Open Prices
 nav:
   - Home: index.md
   - Data Dictionary: data_dictionary.md
+  - Detailed Business Context: detailed_business_context.md
+  - Project Organization: project_organization.md
 
 theme:
   name: material

@@ -1,5 +1,13 @@
 # **Dictionnaire de données - Open Prices**
 
+
+Le dataset utilisé est un dataset open source provenant du site datagouv nommé [Open Prices](https://www.data.gouv.fr/datasets/open-prices/).   
+Il vise à collecter et partager des prix de produits à l’échelle mondiale.  
+    
+Le fichier est fourni au format Parquet et comprend 48 colonnes pour un total de 132 440 lignes.  
+La version exploitée dans ce projet correspond à mise à jour du 27 novembre 2025. 
+     
+     
 | Champ | Type | Description | Exemple |
 |-------|------|-------------|---------|
 | id | int | The ID of the price in DB | 42629 |

@@ -8,4 +8,13 @@ Dans ce contexte, les enseignes doivent gérer plusieurs défis simultanés : <b
 - adapter les prix selon la zone géographique (ville, code postal, région) <br>   
 - gérer les promotions et remises   <br>
 - assurer la cohérence tarifaire sur tout le réseau <br>   
-- faire face à un contexte économique parfois tendu (inflation, pouvoir d’achat des ménages concurrence accrue)      
+- faire face à un contexte économique parfois tendu (inflation, pouvoir d’achat des ménages concurrence accrue)   <br>
+
+
+## **Problème métier**
+
+Dans le secteur de la grande distribution, les enseignes doivent gérer des milliers de produits sur un vaste territoire, avec des prix variant selon la catégorie, la zone géographique et les promotions.   
+Avec les données Open Prices, nous nous intéressons à :  <br>  
+- Identifier les anomalies de prix pour détecter d’éventuelles erreurs ou incohérences  <br> 
+- Analyser les tendances tarifaires par produit et zone géographique    <br>
+- Étudier la dynamique des promotions et remises   <br>

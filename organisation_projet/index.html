@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../contexte_metier_detaille/">
       
-      
-        <link rel="next" href="../detailed_business_context/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Dictionnaire des données - Open Prices</title>
+        <title>Organisation du projet - Open Prices</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dictionnaire-de-donnees-open-prices" class="md-skip">
+        <a href="#project-organization" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dictionnaire des données
+              Organisation du projet
             
           </span>
         </div>
@@ -194,12 +192,56 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../accueil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dictionnaire_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionnaire des données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contexte_metier_detaille/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contexte métier détaillé
     
   </span>
   
@@ -230,57 +272,13 @@
   
   
   <span class="md-ellipsis">
-    Dictionnaire des données
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../detailed_business_context/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contexte métier détaillé
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project_organization/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     Organisation du projet
     
   </span>
   
 
       </a>
+      
     </li>
   
 
@@ -319,241 +317,54 @@
 
 
 
-<h1 id="dictionnaire-de-donnees-open-prices"><strong>Dictionnaire de données - Open Prices</strong></h1>
-<table>
-<thead>
-<tr>
-<th>Champ</th>
-<th>Type</th>
-<th>Description</th>
-<th>Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int</td>
-<td>The ID of the price in DB</td>
-<td>42629</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Type of the record</td>
-<td>PRODUCT</td>
-</tr>
-<tr>
-<td>product_code</td>
-<td>string</td>
-<td>The barcode of the product, null if the product is a "raw" product</td>
-<td>3560070283484</td>
-</tr>
-<tr>
-<td>product_name</td>
-<td>string</td>
-<td>Name of the product, if available</td>
-<td>BIO SAURE SAHNE</td>
-</tr>
-<tr>
-<td>category_tag</td>
-<td>string</td>
-<td>Category of the product, only for "raw" products. Uses Open Food Facts taxonomy</td>
-<td>en:broccoli</td>
-</tr>
-<tr>
-<td>labels_tags</td>
-<td>string</td>
-<td>Labels of the product, only for "raw" products. Uses Open Food Facts label taxonomy</td>
-<td>['en:organic']</td>
-</tr>
-<tr>
-<td>origins_tags</td>
-<td>string</td>
-<td>Origins of the product, only for "raw" products. Uses Open Food Facts origin taxonomy</td>
-<td>['en:unknown']</td>
-</tr>
-<tr>
-<td>price</td>
-<td>float</td>
-<td>Price of the product, with discount if any</td>
-<td>1.25</td>
-</tr>
-<tr>
-<td>price_is_discounted</td>
-<td>bool</td>
-<td>Whether the price is discounted</td>
-<td>False</td>
-</tr>
-<tr>
-<td>price_without_discount</td>
-<td>float</td>
-<td>Price without discount, null if not discounted</td>
-<td>9.99</td>
-</tr>
-<tr>
-<td>price_per</td>
-<td>string</td>
-<td>Unit for which the price is given (e.g., "KILOGRAM", "UNIT")</td>
-<td>KILOGRAM</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>string</td>
-<td>Currency of the price</td>
-<td>EUR</td>
-</tr>
-<tr>
-<td>location_osm_id</td>
-<td>int</td>
-<td>OpenStreetMap ID of the location</td>
-<td>123456789</td>
-</tr>
-<tr>
-<td>location_osm_type</td>
-<td>string</td>
-<td>Type of OpenStreetMap location (e.g., NODE, WAY)</td>
-<td>NODE</td>
-</tr>
-<tr>
-<td>location_id</td>
-<td>int</td>
-<td>ID of the location in Open Prices DB</td>
-<td>9876</td>
-</tr>
-<tr>
-<td>date</td>
-<td>datetime</td>
-<td>Date when the price was recorded</td>
-<td>2024-01-16</td>
-</tr>
-<tr>
-<td>proof_id</td>
-<td>int</td>
-<td>ID of the proof of the price in Open Prices DB</td>
-<td>54321</td>
-</tr>
-<tr>
-<td>owner</td>
-<td>string</td>
-<td>Hashed owner of the price for privacy</td>
-<td>abc123hash</td>
-</tr>
-<tr>
-<td>created</td>
-<td>datetime</td>
-<td>Date when the price was created in Open Prices DB</td>
-<td>2024-01-16 18:29:47</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>datetime</td>
-<td>Date when the price was last updated in Open Prices DB</td>
-<td>2024-08-25 13:41:04</td>
-</tr>
-<tr>
-<td>proof_file_path</td>
-<td>string</td>
-<td>Path to the proof file in Open Prices DB</td>
-<td>/proofs/42629.pdf</td>
-</tr>
-<tr>
-<td>proof_type</td>
-<td>string</td>
-<td>Type of the proof (RECEIPT, PRICE_TAG, GDPR_REQUEST, SHOP_IMPORT)</td>
-<td>RECEIPT</td>
-</tr>
-<tr>
-<td>proof_date</td>
-<td>datetime</td>
-<td>Date of the proof</td>
-<td>2024-01-15</td>
-</tr>
-<tr>
-<td>proof_currency</td>
-<td>string</td>
-<td>Currency of the proof, should match price currency</td>
-<td>EUR</td>
-</tr>
-<tr>
-<td>proof_created</td>
-<td>datetime</td>
-<td>Datetime when the proof was created in Open Prices DB</td>
-<td>2024-01-16 18:29:47</td>
-</tr>
-<tr>
-<td>proof_updated</td>
-<td>datetime</td>
-<td>Datetime when the proof was last updated in Open Prices DB</td>
-<td>2024-08-25 13:41:04</td>
-</tr>
-<tr>
-<td>location_osm_display_name</td>
-<td>string</td>
-<td>Display name of the OpenStreetMap location</td>
-<td>Supermarché Paris 12</td>
-</tr>
-<tr>
-<td>location_osm_address_city</td>
-<td>string</td>
-<td>City of the OpenStreetMap location</td>
-<td>Paris</td>
-</tr>
-<tr>
-<td>location_osm_address_postcode</td>
-<td>string</td>
-<td>Postcode of the OpenStreetMap location</td>
-<td>75012</td>
-</tr>
-<tr>
-<td>location_osm_address_country</td>
-<td>string</td>
-<td>Country of the OpenStreetMap location</td>
-<td>France</td>
-</tr>
-<tr>
-<td>location_osm_address_country_code</td>
-<td>string</td>
-<td>Country code</td>
-<td>FR</td>
-</tr>
-<tr>
-<td>location_osm_lat</td>
-<td>float</td>
-<td>Latitude of the location</td>
-<td>48.848500</td>
-</tr>
-<tr>
-<td>location_osm_lon</td>
-<td>float</td>
-<td>Longitude of the location</td>
-<td>2.370951</td>
-</tr>
-<tr>
-<td>location_website_url</td>
-<td>string</td>
-<td>Website URL of the store if available</td>
-<td>https://www.but.fr</td>
-</tr>
-<tr>
-<td>location_source</td>
-<td>string</td>
-<td>Source of the location info</td>
-<td>API</td>
-</tr>
-<tr>
-<td>location_created</td>
-<td>datetime</td>
-<td>Timestamp when the location record was created</td>
-<td>2024-01-16 18:29:47</td>
-</tr>
-<tr>
-<td>location_updated</td>
-<td>datetime</td>
-<td>Timestamp when the location record was last updated</td>
-<td>2024-08-25 13:41:04</td>
-</tr>
-</tbody>
-</table>
+<h1 id="project-organization"><strong>Project Organization</strong></h1>
+<pre><code>├── LICENSE            &lt;- Open-source license if one is chosen
+├── Makefile           &lt;- Makefile with convenience commands like `make data` or `make train`
+├── README.md          &lt;- The top-level README for developers using this project.
+├── data
+│   ├── external       &lt;- Data from third party sources.
+│   ├── interim        &lt;- Intermediate data that has been transformed.
+│   ├── processed      &lt;- The final, canonical data sets for modeling.
+│   └── raw            &lt;- The original, immutable data dump.
+│
+├── docs               &lt;- A default mkdocs project; see www.mkdocs.org for details
+│
+├── models             &lt;- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          &lt;- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+├── pyproject.toml     &lt;- Project configuration file with package metadata for 
+│                         open_prices and configuration for tools like black
+│
+├── references         &lt;- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            &lt;- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        &lt;- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   &lt;- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze &gt; requirements.txt`
+│
+├── setup.cfg          &lt;- Configuration file for flake8
+│
+└── open_prices   &lt;- Source code for use in this project.
+    │
+    ├── __init__.py             &lt;- Makes open_prices a Python module
+    │
+    ├── config.py               &lt;- Store useful variables and configuration
+    │
+    ├── dataset.py              &lt;- Scripts to download or generate data
+    │
+    ├── features.py             &lt;- Code to create features for modeling
+    │
+    ├── modeling                
+    │   ├── __init__.py 
+    │   ├── predict.py          &lt;- Code to run model inference with trained models          
+    │   └── train.py            &lt;- Code to train models
+    │
+    └── plots.py                &lt;- Code to create visualizations
+</code></pre>
 
 
 

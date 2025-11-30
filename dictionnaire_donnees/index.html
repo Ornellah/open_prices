@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../data_dictionary/">
+        <link rel="prev" href="../accueil/">
       
       
-        <link rel="next" href="../project_organization/">
+        <link rel="next" href="../contexte_metier_detaille/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Contexte métier détaillé - Open Prices</title>
+        <title>Dictionnaire des données - Open Prices</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contexte-metier-detaille" class="md-skip">
+        <a href="#dictionnaire-de-donnees-open-prices" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contexte métier détaillé
+              Dictionnaire des données
             
           </span>
         </div>
@@ -194,34 +194,12 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../accueil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Accueil
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_dictionary/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Dictionnaire des données
     
   </span>
   
@@ -247,58 +225,17 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Contexte métier détaillé
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Contexte métier détaillé
+    Dictionnaire des données
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-metier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème métier
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -311,7 +248,29 @@
   
   
     <li class="md-nav__item">
-      <a href="../project_organization/" class="md-nav__link">
+      <a href="../contexte_metier_detaille/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contexte métier détaillé
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../organisation_projet/" class="md-nav__link">
         
   
   
@@ -346,23 +305,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probleme-metier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problème métier
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -377,21 +319,241 @@
 
 
 
-<h1 id="contexte-metier-detaille"><strong>Contexte métier détaillé</strong></h1>
-<p>Le secteur de la grande distribution en France regroupe les principaux circuits : hypermarchés, supermarchés, drives et magasins de proximité. Il est dominé par quelques enseignes majeures, telles qu’E.Leclerc, Carrefour ou Les Mousquetaires, qui détiennent l’essentiel de la part de marché.</p>
-<p>Dans ce contexte, les enseignes doivent gérer plusieurs défis simultanés : <br>
-- gérer des milliers de produits sur un vaste territoire <br>
-- fixer des prix attractifs tout en conservant une marge suffisante <br>
-- adapter les prix selon la zone géographique (ville, code postal, région) <br>
-- gérer les promotions et remises <br>
-- assurer la cohérence tarifaire sur tout le réseau <br>
-- faire face à un contexte économique parfois tendu (inflation, pouvoir d’achat des ménages concurrence accrue) <br></p>
-<h2 id="probleme-metier"><strong>Problème métier</strong></h2>
-<p>Dans le secteur de la grande distribution, les enseignes doivent gérer des milliers de produits sur un vaste territoire, avec des prix variant selon la catégorie, la zone géographique et les promotions. <br />
-Avec les données Open Prices, nous nous intéressons à :<br />
-- Identifier les anomalies de prix pour détecter d’éventuelles erreurs ou incohérences <br> 
-- Analyser les tendances tarifaires par produit et zone géographique <br>
-- Étudier la dynamique des promotions et remises <br></p>
+<h1 id="dictionnaire-de-donnees-open-prices"><strong>Dictionnaire de données - Open Prices</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Type</th>
+<th>Description</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td>The ID of the price in DB</td>
+<td>42629</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Type of the record</td>
+<td>PRODUCT</td>
+</tr>
+<tr>
+<td>product_code</td>
+<td>string</td>
+<td>The barcode of the product, null if the product is a "raw" product</td>
+<td>3560070283484</td>
+</tr>
+<tr>
+<td>product_name</td>
+<td>string</td>
+<td>Name of the product, if available</td>
+<td>BIO SAURE SAHNE</td>
+</tr>
+<tr>
+<td>category_tag</td>
+<td>string</td>
+<td>Category of the product, only for "raw" products. Uses Open Food Facts taxonomy</td>
+<td>en:broccoli</td>
+</tr>
+<tr>
+<td>labels_tags</td>
+<td>string</td>
+<td>Labels of the product, only for "raw" products. Uses Open Food Facts label taxonomy</td>
+<td>['en:organic']</td>
+</tr>
+<tr>
+<td>origins_tags</td>
+<td>string</td>
+<td>Origins of the product, only for "raw" products. Uses Open Food Facts origin taxonomy</td>
+<td>['en:unknown']</td>
+</tr>
+<tr>
+<td>price</td>
+<td>float</td>
+<td>Price of the product, with discount if any</td>
+<td>1.25</td>
+</tr>
+<tr>
+<td>price_is_discounted</td>
+<td>bool</td>
+<td>Whether the price is discounted</td>
+<td>False</td>
+</tr>
+<tr>
+<td>price_without_discount</td>
+<td>float</td>
+<td>Price without discount, null if not discounted</td>
+<td>9.99</td>
+</tr>
+<tr>
+<td>price_per</td>
+<td>string</td>
+<td>Unit for which the price is given (e.g., "KILOGRAM", "UNIT")</td>
+<td>KILOGRAM</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>Currency of the price</td>
+<td>EUR</td>
+</tr>
+<tr>
+<td>location_osm_id</td>
+<td>int</td>
+<td>OpenStreetMap ID of the location</td>
+<td>123456789</td>
+</tr>
+<tr>
+<td>location_osm_type</td>
+<td>string</td>
+<td>Type of OpenStreetMap location (e.g., NODE, WAY)</td>
+<td>NODE</td>
+</tr>
+<tr>
+<td>location_id</td>
+<td>int</td>
+<td>ID of the location in Open Prices DB</td>
+<td>9876</td>
+</tr>
+<tr>
+<td>date</td>
+<td>datetime</td>
+<td>Date when the price was recorded</td>
+<td>2024-01-16</td>
+</tr>
+<tr>
+<td>proof_id</td>
+<td>int</td>
+<td>ID of the proof of the price in Open Prices DB</td>
+<td>54321</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>string</td>
+<td>Hashed owner of the price for privacy</td>
+<td>abc123hash</td>
+</tr>
+<tr>
+<td>created</td>
+<td>datetime</td>
+<td>Date when the price was created in Open Prices DB</td>
+<td>2024-01-16 18:29:47</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>datetime</td>
+<td>Date when the price was last updated in Open Prices DB</td>
+<td>2024-08-25 13:41:04</td>
+</tr>
+<tr>
+<td>proof_file_path</td>
+<td>string</td>
+<td>Path to the proof file in Open Prices DB</td>
+<td>/proofs/42629.pdf</td>
+</tr>
+<tr>
+<td>proof_type</td>
+<td>string</td>
+<td>Type of the proof (RECEIPT, PRICE_TAG, GDPR_REQUEST, SHOP_IMPORT)</td>
+<td>RECEIPT</td>
+</tr>
+<tr>
+<td>proof_date</td>
+<td>datetime</td>
+<td>Date of the proof</td>
+<td>2024-01-15</td>
+</tr>
+<tr>
+<td>proof_currency</td>
+<td>string</td>
+<td>Currency of the proof, should match price currency</td>
+<td>EUR</td>
+</tr>
+<tr>
+<td>proof_created</td>
+<td>datetime</td>
+<td>Datetime when the proof was created in Open Prices DB</td>
+<td>2024-01-16 18:29:47</td>
+</tr>
+<tr>
+<td>proof_updated</td>
+<td>datetime</td>
+<td>Datetime when the proof was last updated in Open Prices DB</td>
+<td>2024-08-25 13:41:04</td>
+</tr>
+<tr>
+<td>location_osm_display_name</td>
+<td>string</td>
+<td>Display name of the OpenStreetMap location</td>
+<td>Supermarché Paris 12</td>
+</tr>
+<tr>
+<td>location_osm_address_city</td>
+<td>string</td>
+<td>City of the OpenStreetMap location</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>location_osm_address_postcode</td>
+<td>string</td>
+<td>Postcode of the OpenStreetMap location</td>
+<td>75012</td>
+</tr>
+<tr>
+<td>location_osm_address_country</td>
+<td>string</td>
+<td>Country of the OpenStreetMap location</td>
+<td>France</td>
+</tr>
+<tr>
+<td>location_osm_address_country_code</td>
+<td>string</td>
+<td>Country code</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>location_osm_lat</td>
+<td>float</td>
+<td>Latitude of the location</td>
+<td>48.848500</td>
+</tr>
+<tr>
+<td>location_osm_lon</td>
+<td>float</td>
+<td>Longitude of the location</td>
+<td>2.370951</td>
+</tr>
+<tr>
+<td>location_website_url</td>
+<td>string</td>
+<td>Website URL of the store if available</td>
+<td>https://www.but.fr</td>
+</tr>
+<tr>
+<td>location_source</td>
+<td>string</td>
+<td>Source of the location info</td>
+<td>API</td>
+</tr>
+<tr>
+<td>location_created</td>
+<td>datetime</td>
+<td>Timestamp when the location record was created</td>
+<td>2024-01-16 18:29:47</td>
+</tr>
+<tr>
+<td>location_updated</td>
+<td>datetime</td>
+<td>Timestamp when the location record was last updated</td>
+<td>2024-08-25 13:41:04</td>
+</tr>
+</tbody>
+</table>
 
 
 

@@ -8,7 +8,7 @@ Dans ce contexte, les enseignes doivent gérer plusieurs défis simultanés :
 - adapter les prix selon la zone géographique (ville, code postal, région) <br>   
 - gérer les promotions et remises <br>
 - assurer la cohérence tarifaire sur tout le réseau <br>   
-- faire face à un contexte économique parfois tendu (inflation, pouvoir d’achat des ménages concurrence accrue)  <br>
+- faire face à un contexte économique parfois tendu (inflation, pouvoir d’achat des ménages concurrence accrue) <br>
 
 
 ## **Problème métier**

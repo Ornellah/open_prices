@@ -1,10 +1,10 @@
 site_name: Open Prices
 
 nav:
-  - Accueil: index.md
-  - Dictionnaire des données: data_dictionary.md
-  - Contexte métier détaillé: detailed_business_context.md
-  - Organisation du projet: project_organization.md
+  - Accueil: accueil.md
+  - Dictionnaire des données: dictionnaire_donnees.md
+  - Contexte métier détaillé: contexte_metier_detaille.md
+  - Organisation du projet: organisation_projet.md
 
 theme:
   name: material

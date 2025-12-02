@@ -5,6 +5,7 @@ nav:
   - Dictionnaire des données: dictionnaire_donnees.md
   - Contexte métier détaillé: contexte_metier_detaille.md
   - Organisation du projet: organisation_projet.md
+  - Remarques: remarques.md
 
 theme:
   name: material

@@ -1,29 +1,33 @@
-from pathlib import Path
-
-from loguru import logger
-from tqdm import tqdm
-import typer
-
-from open_prices.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
-
-app = typer.Typer()
+import pandas as pd
 
 
-@app.command()
-def main(
-    # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
-    input_path: Path = RAW_DATA_DIR / "dataset.csv",
-    output_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
-    # ----------------------------------------------
-):
-    # ---- REPLACE THIS WITH YOUR OWN CODE ----
-    logger.info("Processing dataset...")
-    for i in tqdm(range(10), total=10):
-        if i == 5:
-            logger.info("Something happened for iteration 5.")
-    logger.success("Processing dataset complete.")
-    # -----------------------------------------
+def noneSumCalc(df: pd.DataFrame):
+    dfNone = pd.DataFrame({"columns": pd.Series(dtype='str'),"noneSum": pd.Series(dtype='float')})
+    for i in df:
+        colSum = df[f"{i}"].isna().sum()
+        dfSize = df.shape[0]
+        noneSum = colSum / dfSize
+        new_row = pd.DataFrame([{"columns": i, "noneSum": noneSum}])
+        dfNone = pd.concat([dfNone, new_row], ignore_index=True)
+    return dfNone
 
+def checkListTypeAndConvert(df:pd.DataFrame, convertColumnList:bool):
+    result = []
+    columnList = []
+    for i in df:
+        listCheck = df[i][df[f"{i}"].isnull() == False]
+        elementList = listCheck.values[0]
+        if type(elementList).__name__ in ["list", "tuple"]:
+            result.append(i)
+    if len(result) !=0 and convertColumnList == True:
+        columnList.extend(result)
+        for i in columnList:
+            df[f"{i}"] = df[f'{i}'].astype(str)
+        result.clear()
+    return result
 
-if __name__ == "__main__":
-    app()
+def printColumnUnique(df:pd.DataFrame):
+    for i in df:
+        print(f"\n--- {i} ---")
+        print(df[i].nunique())
+        print(df[i].unique())

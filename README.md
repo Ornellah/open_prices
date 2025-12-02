@@ -12,7 +12,7 @@ Le dataset utilisé est un dataset open source provenant du site datagouv nommé
 Il vise à collecter et partager des prix de produits à l’échelle mondiale.  
     
 Le fichier est fourni au format Parquet et comprend 48 colonnes pour un total de 132 440 lignes.  
-La version exploitée dans ce projet correspond à mise à jour du 27 novembre 2025.  
+La version exploitée dans ce projet correspond à mise à jour du 02 décembre 2025.  
 
 ## Contexte métier
 

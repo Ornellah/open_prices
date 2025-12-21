@@ -17,9 +17,10 @@ def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool):
     columnList = []
     for i in df:
         listCheck = df[i][df[f"{i}"].isnull() == False]
-        elementList = listCheck.values[0]
-        if type(elementList).__name__ in ["list", "tuple"]:
-            result.append(i)
+        if len(listCheck) != 0:
+            elementList = listCheck.values[0]
+            if type(elementList).__name__ in ["list", "tuple"]:
+                result.append(i)
     if len(result) != 0 and convertColumnList == True:
         columnList.extend(result)
         for i in columnList:

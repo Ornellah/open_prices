@@ -16,12 +16,12 @@ def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool):
     result = []
     columnList = []
     for i in df:
-        listCheck = df[i][df[f"{i}"].isnull() == False]
+        listCheck = df[i][df[f"{i}"].notnull()]
         if len(listCheck) != 0:
             elementList = listCheck.values[0]
             if type(elementList).__name__ in ["list", "tuple"]:
                 result.append(i)
-    if len(result) != 0 and convertColumnList == True:
+    if len(result) != 0 and convertColumnList:
         columnList.extend(result)
         for i in columnList:
             df[f"{i}"] = df[f'{i}'].astype(str)

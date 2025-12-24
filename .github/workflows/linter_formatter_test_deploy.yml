@@ -1,0 +1,70 @@
+name: linter_formatter_test_build
+on : 
+    push:
+        branches:
+          - main
+
+jobs:
+    linter-formatter:
+        name: Run linter and formatter
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v6
+            - name: dependencies install
+              uses: actions/setup-python@v5
+              with: 
+                python-version: "3.13"
+                cache: 'pip' 
+                cache-dependency-path: requirements.txt
+            - run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+            - name: Run Black
+              run: |
+                black --check .
+
+            - name: Run Ruff
+              run: |
+                ruff check .
+
+    tests:
+        needs: linter-formatter
+        name: Run tests
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Checkout repo
+              uses: actions/checkout@v6
+            - name: dependencies install
+              uses: actions/setup-python@v5
+              with: 
+                python-version: "3.13"
+                cache: 'pip' 
+                cache-dependency-path: requirements.txt
+            - run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+            - name: Run pytest
+              run: |
+                pytest -v
+    deploy:
+        needs: tests
+        name: Deploy MkDocs
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write
+        steps: 
+            - name: Checkout repo
+              uses: actions/checkout@v6
+            - name: dependencies install
+              uses: actions/setup-python@v5
+              with: 
+                python-version: "3.13"
+                cache: 'pip' 
+                cache-dependency-path: requirements.txt
+            - run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+            - name: Deploy MkDocs on gh-deploy branch
+              run: mkdocs gh-deploy
+

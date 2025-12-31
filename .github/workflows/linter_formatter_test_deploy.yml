@@ -6,7 +6,7 @@ on :
 
 jobs:
     linter-formatter:
-        name: Run linter and formatter
+        name: Run linter, formatter and type check
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repo
@@ -27,6 +27,9 @@ jobs:
             - name: Run Ruff
               run: |
                 ruff check .
+            - name: Run Mypy
+              run: |
+                mypy
 
     tests:
         needs: linter-formatter

@@ -25,6 +25,7 @@ dependencies = [
   "matplotlib",
   "mkdocs",
   "mkdocs-material",
+  "mypy",
   "notebook",
   "numpy",
   "pandas",
@@ -69,3 +70,17 @@ ignore = ["N801","N802","N803","N806","N812","N815","N816","D212","D211"]
 "tests/*.py" = ["D"]
 "notebooks/*.ipynb" = ["D"]
 "open_prices/modeling/*.py" = ["D"]
+
+[tool.mypy]
+files = "open_prices"
+exclude = "open_prices/modeling/.*"
+disallow_untyped_defs = true
+disallow_untyped_globals = true
+disallow_incomplete_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_unreachable = true
+strict_optional = true
+no_implicit_optional = true
+ignore_missing_imports = true
+follow_imports = "silent"

@@ -1,17 +1,18 @@
 black[jupyter]
 fastparquet
 ipython
-ruff
 jupyterlab
 loguru
 matplotlib
 mkdocs
 mkdocs-material
+mypy
 notebook
 numpy
 pandas
 pip
 pytest
 python-dotenv
+ruff
 scikit-learn
 -e .

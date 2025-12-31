@@ -1,3 +1,14 @@
+"""
+Unit tests for the OpenPrices dataset module.
+
+Tests the functions:
+- noneSumCalc
+- checkListTypeAndConvert
+- printColumnUnique
+
+Uses pytest as the test framework.
+"""
+
 import numpy as np
 import pandas as pd
 import pytest

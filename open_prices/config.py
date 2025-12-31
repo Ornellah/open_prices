@@ -1,3 +1,11 @@
+"""
+Configuration module for OpenPrices.
+
+Provides the main project paths and directories used across the package.
+Environment variables are loaded automatically from a `.env` file if it exists,
+and the project root path is logged via `loguru`.
+"""
+
 from pathlib import Path
 
 from dotenv import load_dotenv

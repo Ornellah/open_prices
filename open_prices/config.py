@@ -15,17 +15,17 @@ from loguru import logger
 load_dotenv()
 
 # Paths
-PROJ_ROOT = Path(__file__).resolve().parents[1]
+PROJ_ROOT: Path = Path(__file__).resolve().parents[1]
 logger.info(f"PROJ_ROOT path is: {PROJ_ROOT}")
 
-DATA_DIR = PROJ_ROOT / "data"
-RAW_DATA_DIR = DATA_DIR / "raw"
-INTERIM_DATA_DIR = DATA_DIR / "interim"
-PROCESSED_DATA_DIR = DATA_DIR / "processed"
-EXTERNAL_DATA_DIR = DATA_DIR / "external"
-EXTERNAL_DATA_FILE = EXTERNAL_DATA_DIR / "prices.parquet"
+DATA_DIR: Path = PROJ_ROOT / "data"
+RAW_DATA_DIR: Path = DATA_DIR / "raw"
+INTERIM_DATA_DIR: Path = DATA_DIR / "interim"
+PROCESSED_DATA_DIR: Path = DATA_DIR / "processed"
+EXTERNAL_DATA_DIR: Path = DATA_DIR / "external"
+EXTERNAL_DATA_FILE: Path = EXTERNAL_DATA_DIR / "prices.parquet"
 
-MODELS_DIR = PROJ_ROOT / "models"
+MODELS_DIR: Path = PROJ_ROOT / "models"
 
-REPORTS_DIR = PROJ_ROOT / "reports"
-FIGURES_DIR = REPORTS_DIR / "figures"
+REPORTS_DIR: Path = PROJ_ROOT / "reports"
+FIGURES_DIR: Path = REPORTS_DIR / "figures"

@@ -7,7 +7,7 @@ Provides functions for processing and analyzing dataframes.
 import pandas as pd
 
 
-def noneSumCalc(df: pd.DataFrame):
+def noneSumCalc(df: pd.DataFrame) -> pd.DataFrame:
     """
     Calculate the proportion of missing values for each column in a DataFrame.
 
@@ -38,17 +38,19 @@ def noneSumCalc(df: pd.DataFrame):
     1       B  0.66
 
     """
-    dfNone = pd.DataFrame({"columns": pd.Series(dtype='str'), "noneSum": pd.Series(dtype='float')})
+    dfNone: pd.DataFrame = pd.DataFrame(
+        {"columns": pd.Series(dtype='str'), "noneSum": pd.Series(dtype='float')}
+    )
     for i in df:
-        colSum = df[f"{i}"].isna().sum()
-        dfSize = df.shape[0]
-        noneSum = colSum / dfSize
-        new_row = pd.DataFrame([{"columns": i, "noneSum": noneSum}])
+        colSum: int = df[f"{i}"].isna().sum()
+        dfSize: int = df.shape[0]
+        noneSum: float = colSum / dfSize
+        new_row: pd.DataFrame = pd.DataFrame([{"columns": i, "noneSum": noneSum}])
         dfNone = pd.concat([dfNone, new_row], ignore_index=True)
     return dfNone
 
 
-def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool):
+def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool) -> list:
     """
     Identify columns containing list or tuple elements and optionally convert them to strings.
 
@@ -88,12 +90,12 @@ def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool):
     dtype('O')
 
     """
-    result = []
-    columnList = []
+    result: list = []
+    columnList: list = []
     for i in df:
-        listCheck = df[i][df[f"{i}"].notnull()]
+        listCheck: pd.Series = df[i][df[f"{i}"].notnull()]
         if len(listCheck) != 0:
-            elementList = listCheck.values[0]
+            elementList: object = listCheck.values[0]
             if type(elementList).__name__ in ["list", "tuple"]:
                 result.append(i)
     if len(result) != 0 and convertColumnList:
@@ -104,7 +106,7 @@ def checkListTypeAndConvert(df: pd.DataFrame, convertColumnList: bool):
     return result
 
 
-def printColumnUnique(df: pd.DataFrame):
+def printColumnUnique(df: pd.DataFrame) -> None:
     """
     Print the unique values and their counts for each column in a DataFrame.
 

@@ -28,7 +28,9 @@ La colonne `origins_tags` est un doublon en terme d'information de la colonne `l
 Les colonnes `proof_source` et `source` contiennent les mêmes informations (même nombre de lignes) donc une des deux a été supprimée (proof_source) pour éviter la redondance.<br>
   
 Les colonnes `proof_created`, `proof_updated`, `location_id`, `proof_file_path`, `proof_mimetype`, `location_created` et `location_updated` ont été supprimées car elles ne sont pas utilisées.<br>
-    
+  
+Les lignes qui avaient les colonnes `product_name` et `category_tag` vides ont été supprimées.<br>
+
 La regex `[a-z]{2}:` a été utilisée sur la colonne `category_tag` pour enlever la partie `en:` présente au début de chaque valeur non nulle.      
 Exemple :     
 valeur initiale = `en:broccoli`

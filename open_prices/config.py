@@ -22,6 +22,7 @@ DATA_DIR: Path = PROJ_ROOT / "data"
 RAW_DATA_DIR: Path = DATA_DIR / "raw"
 INTERIM_DATA_DIR: Path = DATA_DIR / "interim"
 PROCESSED_DATA_DIR: Path = DATA_DIR / "processed"
+PROCESSED_DATA_FILE: Path = PROCESSED_DATA_DIR / "processed_prices.parquet"
 EXTERNAL_DATA_DIR: Path = DATA_DIR / "external"
 EXTERNAL_DATA_FILE: Path = EXTERNAL_DATA_DIR / "prices.parquet"
 

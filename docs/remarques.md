@@ -32,6 +32,8 @@ Les colonnes `proof_created`, `proof_updated`, `location_id`, `proof_file_path`,
 Les lignes qui avaient les colonnes `product_name` et `category_tag` vides ont été supprimées.<br>
   
 Les valeurs nulles de la colonne `price_per` ont été reclassées en "UNIT" (valeur déjà existante) car elles correspondent à un prix unitaire et non au kilo (deuxième valeur déjà existante).<br>
+    
+Les chaines de caractères contenues dans la colonne `product_name` ont été minusculisées pour éviter les potentiels doublons dans les noms des produits.<br>
    
 La regex `[a-z]{2}:` a été utilisée sur la colonne `category_tag` pour enlever la partie `en:` présente au début de chaque valeur non nulle.      
 Exemple :     

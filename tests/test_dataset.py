@@ -38,7 +38,7 @@ def allNanDf() -> pd.DataFrame:
     return df
 
 
-class TestnoneSumCalc:
+class TestNoneSumCalc:
     def testNoneSumLessEqualOne(self) -> None:
         df: pd.DataFrame = pd.DataFrame(
             {
@@ -68,7 +68,7 @@ class TestnoneSumCalc:
         assert (result["noneSum"] == 1).all()
 
 
-class TestcheckListTypeAndConvert:
+class TestCheckListTypeAndConvert:
     def testEmptyDataframe(self, emptyDf: pd.DataFrame) -> None:
         result: list = checkListTypeAndConvert(emptyDf, convertColumnList=False)
         assert result == []

@@ -12,8 +12,7 @@ Dans ce contexte, les enseignes doivent gérer plusieurs défis simultanés : <b
 
 
 ## **Problème métier**
-
-Dans le secteur de la grande distribution, les enseignes doivent gérer des milliers de produits sur un vaste territoire, avec des prix variant selon la catégorie, la zone géographique et les promotions.   
+   
 Avec les données Open Prices, nous nous intéressons à :  
 - Identifier les anomalies de prix pour détecter d’éventuelles erreurs ou incohérences <br> 
 - Analyser les tendances tarifaires par produit et zone géographique <br>

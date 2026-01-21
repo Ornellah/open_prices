@@ -11,8 +11,10 @@ notebook
 numpy
 pandas
 pip
+plotly
 pytest
 python-dotenv
 ruff
 scikit-learn
+streamlit
 -e .

@@ -25,7 +25,6 @@ from open_prices.plot import graphBar
 from open_prices.widgets import selectedCurrencyOrCountry, selectedYear, slider
 
 st.set_page_config(page_title="Ventes annuelles par produit et catégorie", layout="wide")
-
 st.title("Ventes annuelles par produit et catégorie")
 
 df: pd.DataFrame = pd.read_parquet(

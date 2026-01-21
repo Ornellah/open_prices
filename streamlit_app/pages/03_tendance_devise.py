@@ -25,7 +25,6 @@ from open_prices.plot import trendGraphBar, trendGraphLine
 from open_prices.widgets import selectedCurrency, selectedItem, selectedMultipleItems, selectedYear
 
 st.set_page_config(page_title="Tendances temporelles", layout="wide")
-
 st.title("Tendances temporelles des ventes")
 
 df: pd.DataFrame = pd.read_parquet(f"{PROCESSED_DATA_FILE}", engine="fastparquet")

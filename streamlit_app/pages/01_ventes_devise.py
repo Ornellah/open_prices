@@ -25,7 +25,6 @@ from open_prices.plot import graphBar
 from open_prices.widgets import selectedAllYear, slider
 
 st.set_page_config(page_title="Ventes par devise", layout="wide")
-
 st.title("Ventes par devise")
 
 df: pd.DataFrame = pd.read_parquet(f"{PROCESSED_DATA_FILE}", engine="fastparquet")

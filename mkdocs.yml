@@ -9,7 +9,7 @@ nav:
 
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides/
 
 extra_javascript:
   - js/consent.js

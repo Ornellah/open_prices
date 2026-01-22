@@ -11,9 +11,6 @@ theme:
   name: material
   custom_dir: docs/overrides/
 
-extra_javascript:
-  - js/consent.js
-
 extra:
   head:
     - |

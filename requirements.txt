@@ -16,5 +16,5 @@ pytest
 python-dotenv
 ruff
 scikit-learn
-streamlit
+streamlit==1.52.2
 -e .

@@ -12,6 +12,7 @@ theme:
 
 extra_javascript:
   - js/gtm.js
+  - js/consent.js
 
 extra:
   head:

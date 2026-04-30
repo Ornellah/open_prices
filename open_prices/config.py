@@ -7,12 +7,7 @@ and the project root path is logged via `loguru`.
 """
 
 from pathlib import Path
-
-from dotenv import load_dotenv
 from loguru import logger
-
-# Load environment variables from .env file if it exists
-load_dotenv()
 
 # Paths
 PROJ_ROOT: Path = Path(__file__).resolve().parents[1]

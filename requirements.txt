@@ -13,7 +13,6 @@ pandas
 pip
 plotly
 pytest
-python-dotenv
 ruff
 scikit-learn
 streamlit==1.52.2

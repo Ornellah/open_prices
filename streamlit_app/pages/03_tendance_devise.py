@@ -42,7 +42,7 @@ dfCategory: pd.DataFrame = df.dropna(subset=["category_tag", "price"], how="any"
 currenciesProduct: pd.DataFrame = dfProduct["proof_currency"].drop_duplicates().sort_values()
 currenciesCategory: pd.DataFrame = dfCategory["proof_currency"].drop_duplicates().sort_values()
 
-BASE_DIR: Path = Path(__file__).parent.parent
+BASE_DIR: Path = Path(__file__).resolve().parents[1]
 font_path: Path = BASE_DIR / "fonts" / "NotoSans-Regular.ttf"
 properties: fm.FontProperties = fm.FontProperties(fname=str(font_path))
 

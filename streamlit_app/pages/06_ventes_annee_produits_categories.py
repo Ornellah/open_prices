@@ -50,7 +50,7 @@ countryCategory: pd.DataFrame = (
     dfCategory["location_osm_address_country"].drop_duplicates().sort_values()
 )
 
-BASE_DIR: Path = Path(__file__).parent.parent
+BASE_DIR: Path = Path(__file__).resolve().parents[1]
 font_path: Path = BASE_DIR / "fonts" / "NotoSans-Regular.ttf"
 properties: fm.FontProperties = fm.FontProperties(fname=str(font_path))
 

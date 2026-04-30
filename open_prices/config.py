@@ -7,6 +7,7 @@ and the project root path is logged via `loguru`.
 """
 
 from pathlib import Path
+
 from loguru import logger
 
 # Paths
